@@ -6,7 +6,7 @@
       "nombre": "submenu",
       "url": "javascript:void(0)",
       "child": [
-        { "id": "3", "nombre": "Quienes somos?", "url": "/quienes-somos" },
+        { "id": "3", "nombre": "¿Quienes somos?", "url": "/quienes-somos" },
         { "id": "4", "nombre": "Nuestra historia", "url": "/nuestra-historia" }
       ]
     }
@@ -18,9 +18,11 @@
       "nombre": "headers",
       "url": "#",
       "child": [
-        { "id": "3", "nombre": "header 1", "url": "/header1.html" },
+        { "id": "3", "nombre": "header 1", "url": "/" },
         { "id": "4", "nombre": "header 2", "url": "/header2.html" },
-        { "id": "5", "nombre": "header 3", "url": "/header3.html" }
+        { "id": "5", "nombre": "header 3", "url": "/header3.html" },
+        { "id": "6", "nombre": "header 4", "url": "/header4.html" },
+        { "id": "7", "nombre": "header 5", "url": "/header5.html" }
       ]
     },
     {

@@ -12,7 +12,7 @@
         top: 0
         left: 0
         height: 100%
-        width: 100%
+        width: 100% 
         z-index: 99999
         .header__includes
             border-bottom: 0.1px solid #e6e6e6
@@ -34,7 +34,6 @@
             height: 55px
             padding: 0px 20px
             background: #fff     
-    &__logo
     &__burger
         height: 24px
         width: 24px
@@ -97,15 +96,10 @@
                 height: 0.5px
                 width: 280px
                 background: #e6e6e6
-                display: block 
-        &--bottom 
+                display: block
         &--logo
             @media (max-width:1024px)
-                padding: 20px 20px
-    &__list 
-    &__item 
-    &__link 
-        &--top    
+                padding: 20px 20px  
 /*navbar styles*/
 ._navbar
     &__list
@@ -123,12 +117,15 @@
         &--children
             flex-direction: column
             margin-bottom: 0
+            li
+                list-style-type: none !important
+                ._navbar__link
+                    padding: 5px 20px
         &--largeicon img
             width: 16px
             height: 16px
         &--largeicon a
             gap: 5px
-        &--last 
         &--active >div>
             ._navbar__link
                 @media (max-width:1024px)

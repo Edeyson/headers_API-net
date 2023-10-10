@@ -128,6 +128,7 @@
     padding: 20px 20px;
   }
 }
+
 /*navbar styles*/
 ._navbar__list {
   margin-bottom: 0;
@@ -152,6 +153,12 @@
 ._navbar__item--children {
   flex-direction: column;
   margin-bottom: 0;
+}
+._navbar__item--children li {
+  list-style-type: none !important;
+}
+._navbar__item--children li ._navbar__link {
+  padding: 5px 20px;
 }
 ._navbar__item--largeicon img {
   width: 16px;
@@ -262,153 +269,4 @@
   ._navbar ._navbar__item--last ._navbar__submenu .fa.fa-angle-down:before {
     content: "\f104";
   }
-}
-
-@media (min-width: 1025px) {
-  ._navbar__item--last:hover ._navbar__submenu {
-    left: inherit;
-    right: 0;
-  }
-  .header__container::before {
-    content: inherit;
-  }
-  img#dnn_dnnLOGO_imgLogo {
-    max-width: initial;
-    max-height: 40px;
-  }
-  .header-container {
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
-  }
-  .header {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 86px;
-    padding: 0 0;
-    margin: auto;
-  }
-  .header__burger {
-    display: none;
-  }
-  .header__includes {
-    width: 250px;
-  }
-  .header__container {
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  ._navbar__list {
-    display: flex;
-    gap: 30px;
-    align-items: flex-end;
-    justify-content: flex-end;
-  }
-  ._navbar__item {
-    justify-content: flex-end;
-    min-height: inherit;
-    width: -moz-max-content;
-    width: max-content;
-  }
-  ._navbar__item--largeicon img {
-    width: 13px;
-    height: 13px;
-  }
-  ._navbar__item--children {
-    position: relative;
-  }
-  ._navbar__item--children:hover::before {
-    content: "";
-    padding: 10px;
-    position: absolute;
-    top: 22px;
-    left: -11px;
-    width: 95px;
-  }
-  ._navbar__item--children:hover > ._navbar__submenu {
-    display: block;
-  }
-  ._navbar__item--children a {
-    gap: 6px;
-  }
-  ._navbar__item--active ._navbar__link {
-    color: var(--net-color-secundary) !important;
-  }
-  ._navbar__link {
-    width: -moz-max-content;
-    width: max-content;
-    border-left: none;
-    min-height: inherit;
-  }
-  ._navbar__link--top {
-    font-size: 13px;
-  }
-  ._navbar__link--top iconify-icon {
-    margin-top: -1px;
-  }
-  ._navbar__link--bottom {
-    font-size: 18px;
-  }
-  ._navbar__link:hover {
-    background: transparent;
-    border-left: none;
-  }
-  ._navbar__btn-page {
-    padding: 0px;
-  }
-  ._navbar__btn-page i {
-    font-size: 13px;
-  }
-  ._navbar__btn-page:hover {
-    background: inherit;
-  }
-  ._navbar__submenu {
-    width: 100%;
-    display: none;
-    position: absolute;
-    top: 35px;
-    left: -20px;
-    background: #fff;
-    width: -moz-max-content;
-    width: max-content;
-    z-index: 10;
-  }
-  ._navbar__submenu--top {
-    min-width: 150px;
-  }
-  ._navbar__submenu--top ._navbar__item {
-    display: block;
-    width: 100%;
-    padding: 9px;
-    max-width: inherit;
-  }
-  ._navbar__submenu--top ._navbar__item:hover {
-    background-color: #f5f5f5;
-  }
-  ._navbar__submenu ._navbar__item {
-    width: 100%;
-  }
-  ._navbar__submenu ._navbar__link {
-    width: 100%;
-  }
-  ._navbar__submenu--top {
-    top: 25px;
-    border-radius: 5px;
-  }
-  ._navbar__submenu--bottom {
-    padding: 0;
-  }
-  ._navbar__submenu--bottom ._navbar__item:hover::before {
-    content: initial;
-  }
-  ._navbar__submenu--bottom ._navbar__link {
-    font-size: 13px;
-    padding: 12px 20px;
-    width: 100%;
-    justify-content: space-between;
-  }
-  ._navbar__submenu--bottom ._navbar__link:hover {
-    background: rgba(0, 0, 0, 0.0392156863);
-  }
-}/*# sourceMappingURL=header--1.css.map */
+}/*# sourceMappingURL=header.css.map */
