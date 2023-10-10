@@ -1,0 +1,47 @@
+:root{
+    --color-edit-primary:#23B5D3;
+    --color-edit-secondary:#F7F7FF;
+    --color-edit-spaces:#bbbbbb;
+}
+
+#button_lateral{
+    background-color: var(--color-edit-primary);
+    border-radius: 7px;
+    padding: .5rem 1rem;
+    transform: rotate(-90deg);
+    position: fixed;
+    right: 0;
+    top: 40%;
+}
+
+#menu_edit.popup{
+    display: none;
+    background-color: var(--color-edit-secondary) ;
+    width: 400px;
+    height: 500px;
+    padding: 1rem;
+}
+#menu_edit.popup .net-col-md-6{
+    height: 50px;
+    width: 50%;
+    background-color: var(--color-edit-spaces);
+}
+
+.net-row{
+    display: flex;
+    gap: .3rem;
+    margin: .3rem 0;
+    width: 100%;
+}
+
+#menu_edit.popup.visible{
+    display: block;
+    position: fixed;
+    right: 3rem;
+    top: 20%;
+}
+
+
+header ul li{
+    list-style-type: none !important;
+}
