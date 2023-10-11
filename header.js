@@ -21,9 +21,9 @@ setTimeout(()=>{
                         const a = document.createElement('a');
                         a.classList.add("_navbar__link", "_navbar__link--top")
                         a.textContent = item.nombre;
-                        a.href = item.url;
+                        a.href = item.url;                        
+                       
                         
-
                         if(item.child && item.child.length>0){
                             li.classList.add("_navbar__item--children");
                             const subdiv = document.createElement("div");
@@ -31,6 +31,8 @@ setTimeout(()=>{
                             subdiv.appendChild(a);
                             const submenu=document.createElement('ul');
                             submenu.classList.add("_navbar__submenu","_navbar__submenu--top");
+                           
+
                             for (let index = 0; index < item.child.length; index++) {
                                 const lisub = document.createElement('li');
                                  const asub = document.createElement('a');
@@ -47,19 +49,19 @@ setTimeout(()=>{
                                     submenu.append(lisub);
                                 }
 
-                                li.appendChild(submenu);
+                                li.appendChild(submenu.cloneNode(true));
 
-                            const arrow = document.createElement("span");
-                            arrow.classList.add("_navbar__btn-page-desk","_navbar__btn-page","_navbar__btn-page--bottom");
-                            arrow.setAttribute("id", "sub-page");
-                            const icon = document.createElement("iconify-icon");
-                            icon.setAttribute("icon","uil:angle-down")
-                            arrow.appendChild(icon);
-                            a.appendChild(arrow);
+                                const arrow = document.createElement("span");
+                                arrow.classList.add("_navbar__btn-page-desk","_navbar__btn-page","_navbar__btn-page--bottom");
+                                arrow.setAttribute("id", "sub-page");
+                                const icon = document.createElement("iconify-icon");
+                                icon.setAttribute("icon","uil:angle-down")
+                                arrow.appendChild(icon);
+                                a.appendChild(arrow);
 
                         }
-                        li.appendChild(a);
-
+                        
+                        li.appendChild(a.cloneNode(true));
                         menu_top.appendChild(li);
                         
                     });
@@ -109,6 +111,8 @@ setTimeout(()=>{
                     
                 })
                 .catch(error => {
+                    menu_bottom.setAttribute("style","color:red;")
+                    menu_bottom.innerHTML="hubo un error en el menu <br> Comuníquese con el proveedor de manera INMEDIATA"
                     console.error('Hubo un error al cargar el menú:', error);
                 });
 },100);
